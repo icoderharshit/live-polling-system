@@ -3,7 +3,7 @@ import io from 'socket.io-client';
 import { useNavigate } from 'react-router-dom';
 import { getStudentId, getStudentName, setStudentName } from '../../utils/studentSession';
 
-const socket = io('http://localhost:3001');
+const socket = io('https://live-polling-backend-app.vercel.app:3001');
 
 function Timer({ seconds }) {
     const [countdown, setCountdown] = useState(seconds);
