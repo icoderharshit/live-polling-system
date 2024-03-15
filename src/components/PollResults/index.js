@@ -30,7 +30,7 @@ function PollResults({ teacherMode }) {
            
                 const correctAnswerIndex = sessionStorage.getItem("correctAnswerIndex");
                 console.log("correctAnswerIndex: ",correctAnswerIndex);
-                setShowAnswer(Number(correctAnswerIndex));
+                setShowAnswer(correctAnswerIndex);
             
         });
         
@@ -79,7 +79,7 @@ function PollResults({ teacherMode }) {
                                 key={index}
                             >
                                  <div className='flex items-center'>
-            {showAnswer === index && <span className='mr-3'>✔</span>}
+            {showAnswer == index && <span className='mr-3'>✔</span>}
             <span>{option.option}</span>
         </div>
                                 <span className='mr-4'>{calculatePercentage(option.count)==="-"?"-":calculatePercentage(option.count) + "%"}</span>
