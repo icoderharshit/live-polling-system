@@ -1,70 +1,20 @@
-# Getting Started with Create React App
+GitHub Repository:
+Frontend - https://github.com/icoderharshit/live-polling-system
+Backend - https://github.com/icoderharshit/live-polling-backend
+Deployed Project: https://live-polling-system.netlify.app
+Hosted Backend URL: https://live-polling-backend.onrender.com/
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Technologies Used
+         Frontend:React.js, Redux, Tailwind.css
+         Backend: Express, Socket.io
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Steps to run the project using deployed link:
+1. Go to https://live-polling-system.netlify.app
+2. Choose user type (Student/Teacher)
+3. Let suppose, you chose Teacher now you'll see the form to create a poll and ask the question from students.
+4. Fill it however you want the question to be, you'll also see an option to adjust the timer for this question.
+5. Alongside, just open the same link i.e.  https://live-polling-system.netlify.app on any mobile/new tab and choose student this time, and simply fill in your name and continue. You can open as many new tabs or on mobile (as student user type) as you wish to. Basically, this will be like the project serves the purpose if let say a teacher wants to ask a question and poll with the students in the class.
+6. Finally, after you're done opening such student profiles..you'll be seeing a waiting message that suggests that the teacher needs to ask the question. So, from here in the teacher profile tab that you had opened earlier just click on ask question button after filling the req. question details in PollForm and now every student/each tab will be seeing that question for a certain time period (60 seconds by default, or if you'd have provided something else while asking question) .
+7. Here, the live polling starts now...as the students will be submitting their answers they'll be seeing the Live Poll after submitting the answer and also after the timer goes away and if someone chooses not to answer anything, it won't be considered as a valid submission and hence not counted in the live poll..Also, if a student has already submitted the answer he/she won't be available to answer the same again anyway..
+8. On the teacher screen, the live poll will be visible as well but along with 2 extra things, one button which can be used to Reveal Answer to all the students on their screens and another is to Ask Another Question.
+9. The best part is all of this happens in real time :) 
