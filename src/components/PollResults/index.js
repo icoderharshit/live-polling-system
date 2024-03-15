@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import io from 'socket.io-client';
 import { useNavigate } from 'react-router-dom';
 
-const socket = io('https://live-polling-backend-app.vercel.app:3001');
+const socket = io('https://live-polling-backend.onrender.com/');
 
 function PollResults({ teacherMode }) {
     const [question, setQuestion] = useState(null);
