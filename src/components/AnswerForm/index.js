@@ -62,7 +62,7 @@ function AnswerForm() {
             socket.off('askQuestion');
             socket.off('clearScreen');
         };
-    }, [navigate, studentName, studentId]);
+    }, [navigate, studentName, studentId,selectedOption]);
 
     const handleNameChange = (e) => {
         setStudentNameState(e.target.value);
