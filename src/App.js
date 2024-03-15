@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { UserProvider, useUser } from './context/userContext';
+import UserTypeSelection from './components/UserSelection';
+import PollForm from './components/PollForm';
+import AnswerForm from './components/AnswerForm';
+import PollResults from './components/PollResults';
+import Error404 from './components/Error404';
+import '../src/main.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Router>
+            <UserProvider>
+                <AppRoutes />
+            </UserProvider>
+        </Router>
+    );
+}
+
+function AppRoutes() {
+    const { userType } = useUser();
+
+    return (
+        <div className="App">
+            <Routes>
+                <Route path="/" element={userType?userType==="teacher" ? <PollForm/> : <AnswerForm/> : <UserTypeSelection />} />
+                {userType === 'teacher' && <Route path="/createPoll" element={<PollForm />} />}
+                {userType === 'student' && <Route path="/answerQuestion" element={<AnswerForm />} />}
+                <Route path="/pollResults" element={<PollResults teacherMode={userType==="teacher"?true:false}/>} />
+                <Route path="*" element={<Error404 />} />
+            </Routes>
+        </div>
+    );
 }
 
 export default App;
