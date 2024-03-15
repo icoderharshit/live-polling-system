@@ -42,6 +42,7 @@ function PollForm() {
         // Trigger socket event with question data
         socket.emit('askQuestion', { question: newQuestion, options, timeOut: timerOut, correctAnswerIndex });
         
+        sessionStorage.setItem("correctAnswerIndex",correctAnswerIndex)
         // Clear the input fields
         setNewQuestion('');
         setOptions([{ text: '' }]);
