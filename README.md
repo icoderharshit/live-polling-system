@@ -1,8 +1,8 @@
 GitHub Repository:
-Frontend - https://github.com/icoderharshit/live-polling-system
-Backend - https://github.com/icoderharshit/live-polling-backend
-Deployed Project: https://live-polling-system.netlify.app
-Hosted Backend URL: https://live-polling-backend.onrender.com/
+- Frontend - https://github.com/icoderharshit/live-polling-system
+- Backend - https://github.com/icoderharshit/live-polling-backend
+- Deployed Project: https://live-polling-system.netlify.app
+- Hosted Backend URL: https://live-polling-backend.onrender.com/
 
 Technologies Used
          Frontend:React.js, Redux, Tailwind.css
