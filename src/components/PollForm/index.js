@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import io from 'socket.io-client';
 import { useNavigate } from 'react-router-dom';
 
-const socket = io('http://localhost:3001');
+const socket = io('https://live-polling-backend-app.vercel.app');
 
 function PollForm() {
     const [newQuestion, setNewQuestion] = useState('');
