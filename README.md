@@ -4,9 +4,9 @@ GitHub Repository:
 - Deployed Project: https://live-polling-system.netlify.app
 - Hosted Backend URL: https://live-polling-backend.onrender.com/
 
-Technologies Used
-         Frontend:React.js, Redux, Tailwind.css
-         Backend: Express, Socket.io
+Technologies Used:
+- Frontend:React.js, Redux, Tailwind.css
+- Backend: Express, Socket.io
 
 Steps to run the project using deployed link:
 1. Go to https://live-polling-system.netlify.app
