@@ -164,7 +164,7 @@ function AnswerForm() {
               <Timer seconds={seconds} />
             </div>
             <hr />
-            <div className="p-8 flex flex-col items-center ml-[20%]">
+            <div className="p-8 flex flex-col items-center ml-[40px]">
               <h2 className="mt-3 mb-3 text-slate-50 text-lg">
                 Q. {question.question} ?
               </h2>
