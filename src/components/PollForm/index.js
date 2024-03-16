@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import io from 'socket.io-client';
 import { useNavigate } from 'react-router-dom';
 
-const socket = io('https://live-polling-backend.onrender.com/');
+const socket = io('http://localhost:3001');
 
 function PollForm() {
     const [newQuestion, setNewQuestion] = useState('');
-    const [options, setOptions] = useState([{ text: '' }]);
+    const [options, setOptions] = useState([{ text: '' },{ text: '' }, { text: '' }]);
     const [correctAnswerIndex, setCorrectAnswerIndex] = useState(null);
     const [timerOut, setTimerOut] = useState(60);
     const navigate = useNavigate();
@@ -52,12 +52,12 @@ function PollForm() {
     };
 
     return (
-        <div className='p-4 flex flex-col gap-4 h-screen mt-[50px] items-center'>
+        <div className='p-4 flex flex-col gap-4 h-screen bg-slate-50 opacity-95 m-auto items-center justify-center'>
             <div className='flex flex-col gap-3 w-1/2'>
                 <label htmlFor="question">Enter Question and options</label>
                 <textarea
                     autoFocus
-                    className='border border-2 p-2 rounded resize-none'
+                    className='border-2 p-2 rounded resize-none'
                     id="question"
                     value={newQuestion}
                     onChange={handleQuestionChange}
@@ -81,12 +81,15 @@ function PollForm() {
                     </div>
                     {options.map((option, index) => (
                         <div className="flex items-center justify-between mb-4" key={index}>
+                           <span className='flex gap-2 items-center'>
+                            {index+1}
                             <input
-                                className='border border-1 rounded p-1 w-1/2'
+                                className='border border-1 rounded p-1 w-[300px]'
                                 type="text"
                                 value={option.text}
                                 onChange={(e) => handleOptionChange(index, e.target.value)}
                             />
+                            </span>
                             <input
                                 className='h-[16px] w-[16px]'
                                 type="radio"
@@ -99,8 +102,8 @@ function PollForm() {
                 </div>
             </div>
             <div className='w-1/2 flex justify-between'>
-                <button className='border border-2 p-2 rounded' onClick={handleAddOption}>Add another option +</button>
-                <button className='border border-2 p-2 rounded' onClick={handleAskQuestion}>Ask question →</button>
+                <button className='border-2 p-2 rounded' onClick={handleAddOption}>Add another option +</button>
+                <button className='border-2 p-2 rounded' onClick={handleAskQuestion}>Ask question →</button>
             </div>
         </div>
     );
