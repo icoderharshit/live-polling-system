@@ -8,7 +8,7 @@ import {
 } from "../../utils/studentSession";
 import { BallTriangle } from "react-loader-spinner";
 
-const socket = io("http://localhost:3001");
+const socket = io("https://live-polling-backend.onrender.com/");
 
 function Timer({ seconds }) {
   const [countdown, setCountdown] = useState(seconds);
